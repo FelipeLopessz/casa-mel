@@ -86,7 +86,7 @@ const galleryCategories = [
       { src: "/casa-rosa/rosa-spa-2.jpeg", alt: "Spa infantil - relaxamento" },
       { src: "/casa-rosa/rosa-spa-4.jpeg", alt: "Spa infantil - maquiagem" },
       { src: "/casa-rosa/rosa-spa-5.jpeg", alt: "Spa infantil - grupo" },
-      { src: "/casa-rosa/rosa-spa-6-.jpeg", alt: "Spa infantil - brinde" },
+      { src: "/casa-rosa/rosa-spa-6.jpeg", alt: "Spa infantil - brinde" },
     ],
   },
   {

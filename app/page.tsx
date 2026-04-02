@@ -8,47 +8,48 @@ import { FeatureCard } from "@/components/sections/feature-card"
 import { GalleryGrid } from "@/components/sections/gallery-grid"
 import { CTASection } from "@/components/sections/cta-section"
 import { Button } from "@/components/ui/button"
-import { 
-  Sparkles, 
-  Camera, 
-  Heart, 
-  Users, 
-  Star, 
+import {
+  Sparkles,
+  Camera,
+  Heart,
+  Users,
+  Star,
   PartyPopper,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/551123553684?text=Olá,%20vim%20pelo%20site%20da%20Casa%20Mel%20Rosa%20e%20quero%20mais%20informações"
+const WHATSAPP_LINK =
+  "https://wa.me/551123553684?text=Olá,%20vim%20pelo%20site%20da%20Casa%20Mel%20Rosa%20e%20quero%20mais%20informações"
 
-// Imagens de destaque da galeria home (mistura das duas casas com labels)
+// Mantive exatamente as imagens que já estavam no seu código
 const galleryImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rosa-spa-3-R33fBxEmqVPYemMurrimFzDuY7OEOT.jpeg",
+    src: "casa-rosa/rosa-spa-3.jpeg",
     alt: "Spa infantil Casa Rosa",
     label: "Casa Rosa",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amarela-area-externa-2442RCsmtoyYcFIQLEDC4osYpz58WB.jpeg",
+    src: "casa-amarela/amarela-area-externa.jpeg",
     alt: "Área externa Casa Amarela",
     label: "Casa Amarela",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rosa-balada-1-w5562NM4CSVKoiDg8TE3J5wou7dLnr.jpeg",
+    src: "casa-rosa/rosa-balada-1.jpeg",
     alt: "Balada neon Casa Rosa",
     label: "Casa Rosa",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amarela-brincadeiras-1-AAyhBURmFsmqPZfjPbrejfNIunO5NL.jpeg",
+    src: "casa-amarela/amarela-brincadeiras-1.jpeg",
     alt: "Brincadeiras Casa Amarela",
     label: "Casa Amarela",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cortezia1-rGTCxln9zwLf8wc45HVNURK9KK5Dll.jpeg",
+    src: "casa-rosa/Cortezia1.jpeg",
     alt: "Decoração Pequena Sereia Casa Rosa",
     label: "Casa Rosa",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amarela-oficina-1-05uHgvZCqVVR6eCXvpF9i4faoOwpEp.jpeg",
+    src: "casa-amarela/amarela-oficina-1.jpeg",
     alt: "Oficinas Casa Amarela",
     label: "Casa Amarela",
   },
@@ -58,32 +59,38 @@ const features = [
   {
     icon: Sparkles,
     title: "Ambientes Exclusivos",
-    description: "Espaços únicos e encantadores pensados para criar momentos mágicos.",
+    description:
+      "Espaços únicos e encantadores pensados para criar momentos mágicos.",
   },
   {
     icon: Star,
     title: "Experiências Temáticas",
-    description: "Do spa à balada neon, das brincadeiras raiz às oficinas criativas.",
+    description:
+      "Do spa à balada neon, das brincadeiras raiz às oficinas criativas.",
   },
   {
     icon: Heart,
     title: "Momentos Inesquecíveis",
-    description: "Cada detalhe pensado para transformar sonhos em realidade.",
+    description:
+      "Cada detalhe pensado para transformar sonhos em realidade.",
   },
   {
     icon: Camera,
     title: "Espaços para Fotos",
-    description: "Cenários instagramáveis para registrar memórias preciosas.",
+    description:
+      "Cenários instagramáveis para registrar memórias preciosas.",
   },
   {
     icon: Users,
     title: "Atendimento Personalizado",
-    description: "Equipe dedicada para tornar cada festa única e especial.",
+    description:
+      "Equipe dedicada para tornar cada festa única e especial.",
   },
   {
     icon: PartyPopper,
     title: "Festas com Encanto",
-    description: "Experiências completas que encantam crianças e adultos.",
+    description:
+      "Experiências completas que encantam crianças e adultos.",
   },
 ]
 
@@ -92,127 +99,276 @@ export default function HomePage() {
     <>
       <Header />
       <WhatsAppButton />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
+
+      <main className="bg-background">
+        {/* HERO */}
+        <section className="relative isolate min-h-screen overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Lugar-0iy49FJ8Wc8Jo1eNh0YZT3PuX3cFgy.jpeg"
-              alt="Casa Mel Rosa"
+              src="casa-rosa/Lugar.jpeg"
+              alt="Fachada da Casa Mel Rosa"
               fill
-              className="object-cover"
               priority
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-background" />
           </div>
 
-          {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 text-center text-white py-32">
-            <div className="animate-fade-in-up">
-              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
-                Festas Infantis Inesquecíveis
+          <div className="relative z-10 container mx-auto px-4 pt-32 pb-24 md:pt-40 md:pb-28">
+            <div className="max-w-5xl mx-auto text-center text-white">
+              <span className="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur-md">
+                Festas infantis com experiências únicas
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-balance leading-tight">
-                Duas experiências únicas para transformar aniversários em{" "}
-                <span className="text-primary">memórias inesquecíveis</span>
+
+              <h1 className="font-serif text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+                Duas casas, dois estilos e{" "}
+                <span className="text-pink-300">memórias inesquecíveis</span>{" "}
+                para celebrar a infância
               </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10 text-pretty">
-                Conheça a Casa Rosa e a Casa Amarela e escolha o cenário perfeito para a festa do seu filho.
+
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 md:text-xl">
+                Conheça a Casa Rosa e a Casa Amarela e escolha o cenário ideal
+                para viver uma festa especial, cheia de encanto, diversão e
+                momentos que ficam para sempre.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-base"
+                  className="min-w-[210px] rounded-full bg-primary px-8 text-white hover:bg-primary/90"
                 >
                   <Link href="/casa-rosa">Conhecer Casa Rosa</Link>
                 </Button>
+
                 <Button
                   asChild
                   size="lg"
-                  className="bg-yellow hover:bg-yellow/90 text-yellow-foreground rounded-full px-8 py-6 text-base"
+                  className="min-w-[210px] rounded-full bg-yellow px-8 text-yellow-foreground hover:bg-yellow/90"
                 >
                   <Link href="/casa-amarela">Conhecer Casa Amarela</Link>
                 </Button>
+
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-foreground rounded-full px-8 py-6 text-base bg-transparent"
+                  className="min-w-[210px] rounded-full border-2 border-white bg-white/5 px-8 text-white hover:bg-white hover:text-foreground"
                 >
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Falar no WhatsApp
                   </a>
                 </Button>
               </div>
+
+              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-white">
+                    Casa Rosa
+                  </p>
+                  <p className="mt-1 text-sm text-white/75">
+                    Spa, limousine, ofurô, balada e brilho
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-white">
+                    Casa Amarela
+                  </p>
+                  <p className="mt-1 text-sm text-white/75">
+                    Natureza, brincadeiras raiz e diversão ao ar livre
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-white">
+                    Atendimento
+                  </p>
+                  <p className="mt-1 text-sm text-white/75">
+                    Informações rápidas e contato direto no WhatsApp
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-              <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse" />
+          <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2">
+            <div className="flex h-10 w-6 justify-center rounded-full border border-white/40 pt-2">
+              <div className="h-3 w-1.5 animate-pulse rounded-full bg-white/80" />
             </div>
           </div>
         </section>
 
-        {/* Escolha sua experiência */}
-        <section className="py-24 px-4 bg-background">
+        {/* APRESENTAÇÃO */}
+        <section className="px-4 py-20 md:py-24">
+          <div className="container mx-auto">
+            <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <span className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                  Uma proposta diferente para cada estilo de festa
+                </span>
+
+                <h2 className="mt-5 font-serif text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+                  A Casa Mel Rosa reúne duas experiências encantadoras em um só lugar
+                </h2>
+
+                <p className="mt-5 text-base leading-8 text-muted-foreground md:text-lg">
+                  Na Casa Rosa, a proposta é um universo delicado, glamouroso e
+                  cheio de momentos especiais. Na Casa Amarela, a experiência é
+                  leve, divertida e conectada com a infância ao ar livre.
+                </p>
+
+                <p className="mt-4 text-base leading-8 text-muted-foreground md:text-lg">
+                  Assim, cada família pode escolher o ambiente que mais combina
+                  com o estilo da comemoração e com a personalidade da criança.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href="/casa-rosa"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
+                  >
+                    Ver Casa Rosa <ArrowRight className="h-4 w-4" />
+                  </Link>
+
+                  <Link
+                    href="/casa-amarela"
+                    className="inline-flex items-center gap-2 rounded-full bg-yellow px-5 py-3 text-sm font-semibold text-yellow-foreground transition hover:bg-yellow/90"
+                  >
+                    Ver Casa Amarela <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative overflow-hidden rounded-3xl shadow-lg">
+                  <div className="relative aspect-[4/5]">
+                    <Image
+                      src="casa-rosa/rosa-spa-3.jpeg"
+                      alt="Spa Casa Rosa"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className="relative mt-8 overflow-hidden rounded-3xl shadow-lg">
+                  <div className="relative aspect-[4/5]">
+                    <Image
+                      src="casa-amarela/amarela-area-externa.jpeg"
+                      alt="Área externa Casa Amarela"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CARDS PRINCIPAIS */}
+        <section className="bg-secondary/30 px-4 py-20 md:py-24">
           <div className="container mx-auto">
             <SectionTitle
-              title="Escolha sua experiência"
-              subtitle="Dois mundos encantadores esperando para fazer parte da festa do seu filho"
+              title="Escolha a casa ideal para a festa"
+              subtitle="Cada espaço foi pensado para proporcionar uma experiência especial, bonita e inesquecível."
             />
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Card Casa Rosa */}
+            <div className="mx-auto mt-12 grid max-w-6xl gap-8 md:grid-cols-2">
               <Link href="/casa-rosa" className="group">
-                <div className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rosa-spa-5-kEAxGbptUrMCKttvkC3lhhTh1dL4e7.jpeg"
-                    alt="Casa Rosa"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium mb-4">
-                      Glamour & Brilho
-                    </span>
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold mb-3">Casa Rosa</h3>
-                    <p className="text-white/90 mb-6 text-pretty">
-                      Uma experiência encantadora com spa, limousine, balada neon, ofurô e momentos inesquecíveis.
+                <div className="overflow-hidden rounded-[32px] border bg-card shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src="casa-rosa/rosa-spa-5.jpeg"
+                      alt="Casa Rosa"
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-primary shadow">
+                      Casa Rosa
+                    </div>
+                  </div>
+
+                  <div className="p-7 md:p-8">
+                    <h3 className="font-serif text-3xl font-bold text-foreground">
+                      Casa Rosa: O Destino Perfeito para Festa de Aniversário!
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-muted-foreground">
+                      Um ambiente cor-de-rosa encantador, pensado para meninas e a família toda! A Casa Rosa é o cenário ideal para criar memórias inesquecíveis e celebrar a infância com muito estilo e diversão.
                     </p>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
-                      Conhecer <ArrowRight className="w-4 h-4" />
-                    </span>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                        Ofurô
+                      </span>
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                        Balada Neon
+                      </span>
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                        Desfile no tapete vermelho
+                      </span>
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                        Oficinas criativas e gincanas divertidas
+                      </span>
+                    </div>
+
+                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
+                      Conhecer Casa Rosa
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </div>
                   </div>
                 </div>
               </Link>
 
-              {/* Card Casa Amarela */}
               <Link href="/casa-amarela" className="group">
-                <div className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amarela-area-externa3-AkfJBv65uM6mPTDWiCKLvSTH1AQgdw.jpeg"
-                    alt="Casa Amarela"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 via-amber-500/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium mb-4">
-                      Natureza & Diversão
-                    </span>
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold mb-3">Casa Amarela</h3>
-                    <p className="text-white/90 mb-6 text-pretty">
-                      Uma casa de brincar cheia de natureza, brincadeiras raiz, oficinas e diversão ao ar livre.
+                <div className="overflow-hidden rounded-[32px] border bg-card shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src="casa-amarela/amarela-area-externa3.jpeg"
+                      alt="Casa Amarela"
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-amber-700 shadow">
+                      Casa Amarela
+                    </div>
+                  </div>
+
+                  <div className="p-7 md:p-8">
+                    <h3 className="font-serif text-3xl font-bold text-foreground">
+                      Casa Amarela: A Magia das Festa de Infância!
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-muted-foreground">
+                      Festejamos a infância na Casa Amarela! Uma casa de brincar que lembra a casa da vovó, com árvores frutíferas, brincadeiras raiz e muita diversão ao ar livre!
                     </p>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
-                      Conhecer <ArrowRight className="w-4 h-4" />
-                    </span>
+
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      <span className="rounded-full bg-yellow/20 px-3 py-1 text-sm font-medium text-amber-800">
+                        Corrida do saco
+                      </span>
+                      <span className="rounded-full bg-yellow/20 px-3 py-1 text-sm font-medium text-amber-800">
+                        Guerra de bexiga
+                      </span>
+                      <span className="rounded-full bg-yellow/20 px-3 py-1 text-sm font-medium text-amber-800">
+                        Festa das cores
+                      </span>
+                      <span className="rounded-full bg-yellow/20 px-3 py-1 text-sm font-medium text-amber-800">
+                        Muita Diversão
+                      </span>
+                    </div>
+
+                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
+                      Conhecer Casa Amarela
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -220,15 +376,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Diferenciais */}
-        <section className="py-24 px-4 bg-secondary/30">
+        {/* DIFERENCIAIS */}
+        <section className="px-4 py-20 md:py-24">
           <div className="container mx-auto">
             <SectionTitle
               title="Por que escolher a Casa Mel Rosa?"
-              subtitle="Experiências únicas pensadas para criar os melhores momentos"
+              subtitle="Estrutura, carinho e experiências pensadas para fazer a festa acontecer do jeito certo."
             />
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}
@@ -241,28 +397,33 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Galeria Destaque */}
-        <section className="py-24 px-4 bg-background">
+        {/* GALERIA */}
+        <section className="bg-secondary/20 px-4 py-20 md:py-24">
           <div className="container mx-auto">
             <SectionTitle
-              title="Momentos Especiais"
-              subtitle="Veja um pouco do que preparamos em cada uma das nossas casas"
+              title="Momentos que fazem cada festa ser especial"
+              subtitle="Um pouco do encanto, da alegria e da experiência que cada casa proporciona."
             />
 
-            <div className="max-w-6xl mx-auto">
+            <div className="mx-auto mt-12 max-w-6xl">
               <GalleryGrid images={galleryImages} columns={3} showLabels />
             </div>
           </div>
         </section>
 
-        {/* CTA Final */}
+        {/* CTA */}
         <CTASection
-          title="Quer conhecer melhor cada espaço?"
-          subtitle="Explore cada unidade e descubra qual combina mais com a festa que você imaginou."
+          title="Quer descobrir qual casa combina mais com a sua festa?"
+          subtitle="Explore cada espaço com calma e fale com a equipe para receber mais informações."
           buttons={[
             { label: "Ver Casa Rosa", href: "/casa-rosa" },
             { label: "Ver Casa Amarela", href: "/casa-amarela", variant: "outline" },
-            { label: "Chamar no WhatsApp", href: WHATSAPP_LINK, variant: "secondary", external: true },
+            {
+              label: "Chamar no WhatsApp",
+              href: WHATSAPP_LINK,
+              variant: "secondary",
+              external: true,
+            },
           ]}
         />
       </main>

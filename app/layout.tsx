@@ -17,14 +17,17 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Casa Mel Rosa | Festas Infantis Inesquecíveis',
+  title: 'Casa Mel Rosa',
   description: 'Duas experiências únicas para transformar aniversários em memórias inesquecíveis. Conheça a Casa Rosa e a Casa Amarela.',
   keywords: ['festa infantil', 'aniversário', 'casa de festas', 'spa infantil', 'festa do pijama', 'limousine', 'Porto Alegre'],
   authors: [{ name: 'Casa Mel Rosa' }],
-  openGraph: {
-    title: 'Casa Mel Rosa | Festas Infantis Inesquecíveis',
-    description: 'Duas experiências únicas para transformar aniversários em memórias inesquecíveis.',
-    type: 'website',
+
+  icons: {
+  icon: [
+    { url: '/favicon.ico' },
+  ],
+  shortcut: '/favicon.ico',
+  apple: '/favicon.ico',
   },
 }
 

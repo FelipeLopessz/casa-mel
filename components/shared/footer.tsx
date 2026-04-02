@@ -5,7 +5,7 @@ const WHATSAPP_LINK = "https://wa.me/551123553684?text=Olá,%20vim%20pelo%20site
 const TELEFONE = "(11) 4335-5284"
 const INSTAGRAM_ROSA = "https://instagram.com/casamelrosapink"
 const INSTAGRAM_AMARELA = "https://instagram.com/casamelrosa"
-const FACEBOOK = "https://facebook.com/casamelrosa"
+const FACEBOOK = "https://www.facebook.com/melrosaconfeitaria"
 
 const navigation = [
   { name: "Home", href: "/" },
