@@ -8,6 +8,7 @@ import { FeatureCard } from "@/components/sections/feature-card"
 import { GalleryGrid } from "@/components/sections/gallery-grid"
 import { CTASection } from "@/components/sections/cta-section"
 import { Button } from "@/components/ui/button"
+import { ExperienceVideos } from "@/components/sections/experience-videos"
 import {
   Sparkles,
   Camera,
@@ -410,6 +411,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* EXPERIÊNCIAS REAIS */}
+        <ExperienceVideos />
 
         {/* CTA */}
         <CTASection

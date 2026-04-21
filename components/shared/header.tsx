@@ -75,19 +75,31 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "text-sm font-medium transition-colors duration-300 hover:text-primary relative group",
-                  scrolled ? "text-foreground" : "text-white"
-                )}
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isHighlight = item.name === "Experiências";
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "text-sm font-medium transition-all duration-300 relative group",
+                    scrolled ? "text-foreground" : "text-white",
+                    isHighlight && "text-pink-500 font-semibold"
+                  )}
+                >
+                  {item.name}
+
+                  {/* underline normal */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+
+                  {/* glow premium */}
+                  {isHighlight && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-pink-400 opacity-50 blur-sm" />
+                  )}
+                </Link>
+              );
+            })}
             <Button 
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6"
