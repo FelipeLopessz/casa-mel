@@ -75,6 +75,13 @@ const experiences = [
     description: "Um quintal incrível com árvores frutíferas, cabana de madeira, escorregador, trampolim e muito espaço para as crianças brincarem livremente.",
     image: "/casa-amarela/amarela-area-externa3.jpeg",
   },
+  {
+    id: "arvore",
+    icon: TreePine,
+    title: "Casa na Árvore",
+    description: "Todo Sonho de Criança tem uma casinha na árvore. Na Casa Amarela, ele vira festa.",
+    image: "/casa-amarela/casanaarvorecasaamarela.jpeg",
+  },
 ]
 
 // Galeria por categoria
